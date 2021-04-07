@@ -29,7 +29,7 @@ router.post("/login", async (req, res, next) => {
   }
 });
 
-router.post("/logout", async (req, res, next) => {
+router.get("/logout", async (req, res, next) => {
   if (req.session) {
     req.session.destroy((err) => {
       if (err) {
